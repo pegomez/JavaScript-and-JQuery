@@ -7,5 +7,5 @@ Lab Sessions about JavaScript
 
 Basic commands:
 1. git add --all
-1. git commit -m"Message"
-2. git push
+2. git commit -m"Message"
+3. git push

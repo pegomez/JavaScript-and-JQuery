@@ -3,25 +3,40 @@
 <head>
 	<meta charset="utf-8">
 		<script type="text/javascript">
-		window.addEventListener("load",function(){
+			/* En este caso declaramos la función dentro del propio argumento */
+		window.addEventListener("load",
+			function(){
 			alert("La página se ha cargado");
-		});
+			}
+		);
 		window.addEventListener("keydown",teclaPulsada);
+
 		function botonClick(evento){
 			alert("Hola colega");
 			alert(evento.type);
 			alert(evento.screenX);
-			/* boton.removeEventListener("click",botonClick) */
+			/* Si descomentamos la línea de debajo, tan solo se ejecutaría
+			 * el listener una vez */
+			boton.removeEventListener("click",botonClick)
 		};
+
 		function teclaPulsada(evento)
 		{
 			alert(evento.keyCode);
+			/* En caso de que tan solo queramos que muestre el código de la
+			 * tecla pulsada una vez, descomentar la línea de debajo
+			 * window.removeEventListener("keydown",teclaPulsada); */
 		}
+
 	</script>	
 </head>
 <body>
+	<!-- En este lugar definimos el botón como parte del código HTML -->
 	<button id='miBoton'>Haz click aquí</button>
-	
+
+	<!-- A través de este trozo de código JavaScript dotamos de
+	 funcinalidad al botón que hemos definido previamente. Somos
+	 capaces de reconocerlo por el id que tiene dentro del DOM (miBoton)-->
 	<script type="text/javascript">
 		var boton=document.getElementById('miBoton');
 		boton.addEventListener('click', botonClick);

@@ -4,12 +4,15 @@
 <head>
 	<meta charset="utf-8">
 	<script type="text/javascript">
-		/*
+
 		var lista=new Array();
 		lista.push(2);
 		lista.push('hola');
-		console.log(lista[1]);
-		*/
+		console.log(lista[0]);
+        console.log(lista[1]);
+        /*En la consola del navegador sale un valor "undefined"*/
+        console.log(lista[2]);
+
 		
 		var lista=[1,2,3];
 		console.log(lista.length);
@@ -24,16 +27,20 @@
 			for(j=0;j<lista2[i].length;j++)
 				console.log(lista2[i][j]);
 
-		var cadena=lista2[1].join('');
+		/* Todos los elementos del primer elemento de lista2 los une de uno en uno
+		* introduciendo entre cada uno de ellos el caracter expresado en el método join()*/
+		var cadena=lista2[1].join('-');
 		console.log(cadena);
 
 		var cadena2='hola';
 		var lista3=cadena2.split('');
 		console.log(lista3[1]);
 
-		var cadena3='ho-la';
+		var cadena3='oh-la-la';
 		var lista4=cadena3.split('-');
-		console.log(lista4[0]);
+        console.log(lista4[0]);
+		console.log(lista4[1]);
+        console.log(lista4[2]);
 
 	</script>
 </head>

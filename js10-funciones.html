@@ -4,24 +4,26 @@
 	<script type="text/javascript">
 		//1-comprobar lo que ocurre al comentar o no comentar
 		//la llamada a la funcion ShowMessage()
-		/*
+
 		function ShowMessage(){
 			alert("mensaje");
 		}
 		//Llamada
 		ShowMessage();
+
+		/* En el caso de comentar la llamada, no obtenemos ninguna salida. En caso contrario sí que
+		obtenemos el mensaje correspondiente.
 		*/
 
-		/*
+
 		//2-Funciones que se llaman a si mismas
 		(function(){
 			alert("Mensaje funcion que se llama a si misma")
 		})();
 		//Lo que ocurre es que hemos definido una funcion anonima que
 		//se llama a si misma 
-		*/
 
-		/*
+
 		//3-Otro ejemplo de funcion que se llama a si misma
 		//self-invoking function
 		//Partimos de una funcion normal
@@ -30,14 +32,18 @@
 		}
 		//y su llamada
 		MostrarSuma(10,20);
+
 		//Se transforma en self-invoking function:
+		// La estructura consta de (Definición de la función)(argumentos)
 		(function (a,b){
 			alert("Suma="+(a+b).toString());
-		})(30,40);
-		//comprueba el resultado
-		*/
+		})(30,40,40);
 
-		/*
+		//comprueba el resultado
+
+		// El resultado es correcto en ambos casos
+
+
 		//4-Self-invoking function con numero ilimitado de parametros
 		(function(){
 			var s=0;
@@ -45,11 +51,10 @@
 			{
 				s=s+arguments[i];
 			}
-			alert("Suma="+s.toString());
+			alert("Suma="+s);
 		})(10,20,30,40);
-		*/
 
-		/*
+
 		//5-Self-invoking con valor de retorno
 		//Partimos de una funcion con nombre
 		function ObtenerDiferencias(a,b){
@@ -57,17 +62,18 @@
 		}
 		var c=ObtenerDiferencias(10,20);
 		alert(c);
+
 		//Ahora la transformamos en self-invoking
 		var c=(function (a,b){
 			return (a-b);
 		}) (100,200);
 		alert(c);
 
-		//Podriamos evitarnos la variable c:
+		//Podriamos evitarnos la variable c, de nuevo con una función que se llama a sí misma.
 		alert((function (a,b){
 			return (a-b);
 		}) (100,200));
-		*/
+
 
 	</script>
 </head>

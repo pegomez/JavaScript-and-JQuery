@@ -9,7 +9,9 @@
 
 		//Función con parámetros y conversión de tipos
 		function Sumar(a,b){
-			alert("Suma="+(a+b).toString());
+			//alert("Suma="+(a+b).toString());
+            alert("Suma con parentesis="+(a+b)); //OK
+            alert("Suma sin parentesis="+a+b);
 		}
 
 		//Función con un número variable de parámetros
@@ -25,6 +27,7 @@
 		//Comprueba el funcionamiento de Sumar2 en otros navegadores
 		// Es necesario utilizar toString() al concatenar la variable s
 		// dentro del alert?
+		// No, no es necesario siempre y cuando hagamos uso de los paréntesis
 
 		//Función que devuelve un valor
 		function Restar(a,b){
@@ -36,9 +39,10 @@
 	</script>
 </head>
 <body>
-	<input type="button" value="Mostrar Mensaje" onclick="MostrarMsg();">
-	<input type="button" value="Mostrar Suma 10+20" onclick="Sumar(10,20);">
-	<input type="button" value="Mostrar Suma numero variable de argumentos" onclick="Sumar2(10,20,3,5,100);">
-	<input type="button" value="Mostrar Resta" onclick="alert('Resta='+Restar(10,20));">
+	<input type="button" value="Mostrar Mensaje" onclick="MostrarMsg();"> <br/>
+	<input type="button" value="Mostrar Suma 10+20" onclick="Sumar(10,20);"> <br/>
+	<input type="button" value="Mostrar Suma numero variable de argumentos" onclick="Sumar2(10,20);"> <br/>
+	<!-- En este último caso, el alert está definido dentro del onClick() -->
+	<input type="button" value="Mostrar Resta" onclick="alert('Resta='+Restar(20,10));"> <br/>
 </body>
 </html>

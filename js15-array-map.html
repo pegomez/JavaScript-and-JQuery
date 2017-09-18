@@ -4,13 +4,17 @@
 	<script type="text/javascript">
 		var a=[2,4,6,8,5,10,12];
 
-		function realizarProceso(v,i,ary){
-			return v*v;
+		function realizarProceso(v){
+			return Math.pow(v,2);
 		}
 
-		//comprobar valor de a en la consola
+		// Comprobar valor de a en la consola
 		var b=a.map(realizarProceso);
-		//comprobar valor de b
+
+		// Comprobar valor de b
+		// El valor de b es el cuadrado de a (elemento a elemento)
+		// Por lo tanto, la función map opera sobre el array de origen elemento a elemento
+		console.log(b);
 
 	</script>
 </head>

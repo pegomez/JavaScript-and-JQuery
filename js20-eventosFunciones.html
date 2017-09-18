@@ -3,18 +3,20 @@
 	<title></title>
 	<script>
 		function attachEvent(){
-			var btn=document.getElementById("btn");
-			if (btn){
-				btn.onclick=function(){
+			var botonF=document.getElementById("btn");
+			if (botonF){
+                botonF.onclick=function(){
 					alert('Ahora soy un boton funcional');
 				};
-				btn.value="Boton funcional";
+                botonF.value="Boton funcional";
 			}
 		}
 	</script>
 </head>
 <body>
 <input id="btn" type="button" value="Boton no funcional" />
+<!-- De nuevo, ante el método onClick, llamamos a la función correspondiente
+ la cual dota de funcionalidad al botón cuyo identificador es "btn" -->
 <input id="btn2" type="button" value="Asociamos una funcion al boton anterior" onclick="attachEvent()" />
 </body>
 </html>

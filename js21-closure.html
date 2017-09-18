@@ -9,7 +9,12 @@
 
 			alert("Soy la funcion inicial");
 
-			return function(){				
+			return function(){
+			    // Forma de interpretar el condicional
+				/*
+				Si el actual es menor que el máximo (valor con el que llamamos a la función),
+				entonces le sumamos uno al actual. En caso contratio muestro el actual
+				 */
 				return (actual < max) ? actual++ : actual;
 			}
 		}

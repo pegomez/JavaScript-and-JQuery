@@ -9,30 +9,34 @@
 		function MostrarResta(a,b){
 			alert("Resta="+(a-b).toString());
 		}
-		/*
-		//1-Mostramos el funcionamiento normal:
-		RealizarProceso(10,20,30);
-		MostrarResta(10,20);
-		*/
 
-		
+		//1-Mostramos el funcionamiento normal:
+		//RealizarProceso(10,20,30);
+		/*
+		* Una vez que llamamos a RealizarProceso(10,20,30)
+		* lo que ocurre es que muestra el mensaje 30,
+		* y automáticamente después salta un error
+		* 	Uncaught TypeError: d is not a function at RealizarProceso
+		* y ya no continua el programa. Para continuar con el
+		* correcto funcionamiento del programa, comentamos la línea 7
+		* (d(a,b))
+		* */
+		MostrarResta(10,20);
+
+
 		//2-Agregamos una nueva funcion
 		function MostrarMultiplicacion(a,b){
 			alert("Multiplicacion="+(a*b).toString());	
 		}
-		/*
+
 		//Ojo antes de probar el siguiente ejemplo hay
 		//que descomentar la linea de la llamada a d(a,b)
 		//en la funcion RealizarProceso
 		RealizarProceso(10,20,MostrarResta);
-		*/
 
-		/*
 		//3-Ahora simplemente cambiamos la llamada a resta
 		//por una llamada a multiplicacion
 		RealizarProceso(10,20,MostrarMultiplicacion);
-		*/
-
 		
 	</script>
 </head>

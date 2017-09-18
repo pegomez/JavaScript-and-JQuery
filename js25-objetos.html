@@ -3,6 +3,7 @@
 	<title></title>
 	<script type="text/javascript">
 		//1-Definir un objeto
+
 		var oEmp1 = Object();
 		oEmp1.numero = 1001;
 		oEmp1.nombre = "Pepe";
@@ -27,15 +28,20 @@
 		salario : 300,
 		tlfn : "2222220"
 		};
+		// MUCHO CIUDADO con el lugar donde definimos la variable
+        var empleados = [oEmp1,oEmp2,oEmp3];
 		//Comprueba las variables en la consola del navegador
 
 		//Supongamos que tenemos un objeto con muchas propiedades
 		//queremos acceder a las propiedades de ese objeto
 		//para ello usamos el for in para recorrer el objeto
 		//El siguiente ejemplo muestra la clave y el valor del objeto
-		for (p in oEmp3){
-			alert(p + " = "+oEmp3[p]);
+		for(var i=0;i<empleados.length;i++){
+            for (p in empleados[i]){
+                alert(p + " = "+empleados[i][p]);
+            }
 		}
+
 	</script>
 </head>
 <body>

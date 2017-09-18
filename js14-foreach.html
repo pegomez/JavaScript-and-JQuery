@@ -4,12 +4,15 @@
 	<script type="text/javascript">
 		var a=[2,4,6,8,5,10,12];
 
-		function realizarProceso(v,i,ary){
-			ary[i]=v+1;
+		// ¿Por qué sigue funcionando con ary?
+		function realizarProceso(v,i,a){
+			a[i]=v+1;
 		}
 		//Comprueba el valor de a antes y despues
 		//de la siguiente sentencia
+		alert(a);
 		a.forEach(realizarProceso);
+		alert(a);
 
 	</script>
 </head>

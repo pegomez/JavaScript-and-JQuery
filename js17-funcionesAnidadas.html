@@ -4,7 +4,13 @@
 	<script type="text/javascript">
 		function doProcess(a,b){
 			function mostrarSuma(){
+
+			    // Solo esta disponible esta función dentro de mostrarSuma
+			    function sumaUno(v) {
+					return v+1;
+                }
 				alert("Suma="+(a+b).toString());
+                alert("Suma="+sumaUno(a+b).toString());
 			}
 
 			function mostrarResta(){
@@ -15,7 +21,8 @@
 		}
 
 		doProcess(10,20);
-		//No podemos llamar directamente a las funciones interiores
+		// No podemos llamar directamente a las funciones interiores en el marco
+		// de funciones anidadas
 
 	</script>
 </head>

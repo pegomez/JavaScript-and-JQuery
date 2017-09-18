@@ -19,9 +19,15 @@
 		//2-
 		for(var i=0;i<ary.length;i++)
 		{
+		    // OJO. Para comparaciones son tres signos de
+			// igualación ===
 			if (typeof ary[i] === "function")
 			{
 				ary[i]();
+			}
+			else if (typeof  ary[i] === "number")
+			{
+				alert(ary[i]+" es un numero");
 			}
 			else
 			{

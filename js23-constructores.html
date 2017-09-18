@@ -3,19 +3,22 @@
 	<title></title>
 	<script type="text/javascript">
 		//Modos de crear funciones:
-		/*
+
 		//1-Usando la palabra Function con dos parametros y el cuerpo de la funcion
-		var d = new Function("a","b","alert('Suma='+(a+b).toString())");
-		d(10,20);
+		var d1 = new Function("a","b","alert('Suma='+(a+b).toString())");
+		d1(10,20);
 		//Es equivalente a:
-		var d=function (a,b){
+		var d2=function (a,b){
 			alert('Suma='+(a+b).toString());
 		}
-		d(10,20);
-		*/
+		d2(20,10);
+
 		//2-El primer argumento tiene varios parametros, el segundo es el cuerpo
-		var d = new Function("a,b,c,d","alert('Suma='+(a+b+c+d).toString())");
-		d(10,20,30,40);
+		var a = new Function("a,b,c,d","alert('Suma='+(a+b+c+d).toString())");
+		a(10,20,30,40);
+
+		var p = new Function ("a","b","c", "alert('Suma='+(a+b+c).toString())")
+		p(10,20,70);
 
 	</script>
 </head>

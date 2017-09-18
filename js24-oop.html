@@ -3,25 +3,33 @@
 	<title></title>
 	<meta charset="utf-8">
 	<script>
-		var ary=[];
+		var pedro=[];
+		var maria=[];
+		var personas = [pedro,maria];
 		//Array al estilo tradicional		
 		//ary[0]=10;
 		//ary[1]=20;
 
 		//Array asociativos
 		//pares clave-valor
-		ary["Numero"]=1001;
-		ary["Nombre"]="Pepe";
-		ary["Salario"]=4000;
-		ary["Telefono"]="967453535";
+		pedro["Numero"]=1001;
+        pedro["Nombre"]="Pepe";
+        pedro["Salario"]=4000;
+        pedro["Telefono"]="967453535";
 
-		alert("Nombre: "+ary["Nombre"]);
+        maria["Numero"]=1002;
+        maria["Nombre"]="Pepa";
+        maria["Salario"]=5000;
+        maria["Telefono"]="967453735";
+
+		alert("Nombre: "+pedro["Nombre"]);
+        alert("Nombre: "+personas[0].Nombre);
 
 		//comprueba la variable ary en la consola
 		//por ejemplo: ary.Numero
 		//esa notación solo es válida para arrays asociativos
 
-		alert("Usando la notación punto: "+ary.Nombre);
+		alert("Usando la notación punto: "+pedro.Nombre);
 
 		//En Javascript los objetos son arrays asociativos
 

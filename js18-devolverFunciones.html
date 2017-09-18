@@ -19,15 +19,15 @@
 			//2- ponemos la funcion sin ()
 			//return mostrarResta;
 		}
-		*/
-		//1-Llamada para el primer ejemplo
-		//doProcess(10,20);
-		
-		/*
-		//2-Codigo del segundo ejemplo
+
+		// EJEMPLO 1 -Llamada para el primer ejemplo
+		doProcess(10,20);
+
+		// EJEMPLO 2 -Codigo del segundo ejemplo
 		var a=doProcess(10,20);
 		alert("despues del return");
 		a(); //ahora estamos llamando a la funcion del return caso 2: ejecutaria la funcion muestraResta
+
 		*/
 
 		//3-Devolver una funcion anonima
@@ -47,6 +47,7 @@
 		var a=doProcess(20,30);
 		a();
 		*/
+
 		/*
 		//4-Devolver funcion anonima con parametros
 		function doProcess(a,b){
@@ -65,9 +66,11 @@
 		//Ahora tengo que pasarle parametros a la funcion anonima
 		a(100,30);
 		//Comprueba lo que ocurre si la llamada fuera a();
+		a();
+		// En el caso de que la llamada fuera a() la salida resultante sería
+		// NaN
 		*/
-		
-		/*
+
 		//5-Redefinir el contenido de una funcion
 		function doProcess(a,b){
 			function mostrarSuma(){
@@ -81,13 +84,17 @@
 			}
 		}
 
+		// Comportamiento 1 (funcion mostrarSuma())
 		doProcess(10,20);
+        // Comportamiento 2 (una vez redifinida dentro de la función inicial)
 		doProcess(30,55);
+
 		doProcess=function(a,b){
 			alert("Suma="+(a+b).toString());
 		}
+        // Comportamiento 3 (recuperamos la funcionalidad de la suma)
 		doProcess(5,70);
-		*/
+
 	</script>
 </head>
 <body>

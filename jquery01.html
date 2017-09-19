@@ -5,9 +5,14 @@
 	<title>Ejemplo JQuery</title>
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script>
-			
+		/*
+		Evento que indica cuando el documento está preparado. De
+		esta manera, cuando está preparado, se ejecuta la función
+		que le asociamos.
+		 */
 		$(document).on('ready',function(){
-			$('#prueba').text('<p>hola mundo</p>'); /* no es html, es solo texto*/
+            /* No es HTML, tan solo es texto */
+			$('#prueba').text('<p>hola mundo</p>');
 
 			$('.prueba').html('<strong>Usando JQuery</strong>');
 		})

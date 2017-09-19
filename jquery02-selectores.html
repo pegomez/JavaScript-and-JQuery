@@ -11,21 +11,24 @@
 
 			// Ejemplo1: seleccionamos la etiqueta div que tiene 
 			// la clase miDiv
-			/*
+
 			$('div.miDiv').css({
 				'background-color':'#000',
 			})
-			*/
+
 
 			// Ejemplo2: seleccionamos la etiqueta p que está
 			// dentro de un article y éste está dentro de un
 			// div.miDiv
+            // En el momento en que descomentamos esta línea, el texto
+            // que aparece sobre el fondo negro pasa de ser "Hola JQuery"
+            // a "Selectores avanzados"
 			// $('div.miDiv article p').text('Selectores avanzados');
-			
+
 			// Ejemplo 3: modo de seleccionar varias etiquetas a la vez
-			//hay que colocar id en los <p> y añadir al final una etiqueta <span>
+			// hay que colocar id en los <p> y añadir al final una etiqueta <span>
 			
-			//$('#parrafo1,#parrafo2, span').text('tres a la vez');
+			$('#parrafo1,#parrafo2, span').text('tres a la vez');
 			
 
 		})
@@ -34,12 +37,12 @@
 <body>
 	<div class="miDiv">
 		<article>
-			<p>Hola JQuery</p>
+			<p> <id>parrafo1</id> Hola JQuery. <span> Texto dentro de un span.</span></p>
 		</article>
 	</div>
 	<div>
 		<article>
-			<p>Curso</p>
+			<p> <id>parrafo2</id> Curso. <span> Texto dentro de un span.</span></p>
 		</article>
 	</div>
 </body>

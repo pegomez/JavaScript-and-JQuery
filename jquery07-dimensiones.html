@@ -44,18 +44,20 @@
 		$(document).on('ready',function(){
 			/* Ejemplo1: devuelve el ancho de la etiqueta <header> sin unidades*/
 			console.log($('header').width()); 
-			/*alternativa con unidades: 
-			console.log($('header').css('width'));*/
+			/*alternativa con unidades: (px) */
+			console.log($('header').css('width'));
 
-			/* Ejemplo2: set de width 
+			/* Ejemplo2: set de width */
 			$('header img').width(100);
-			*/
+
 
 			/*Ejemplo de get con height */
 			console.log($('#e1').height());
 			
-			/* ejemplo set height
-			$('#e1').height(50); */
+			/* ejemplo set height*/
+			$('#e1').height(150);
+            $('#e1').slideUp(1500).delay(1000).fadeIn(1500);
+            $('#e1').height(100);
 
 			/* Obtener y cambiar la posición*/
 			var pos=$('#e2 p').position();

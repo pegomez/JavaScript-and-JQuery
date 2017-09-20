@@ -6,6 +6,7 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script>
 		$(document).on('ready',function(){
+		    // Modificamos el fondo de todo el documento
 			$('body,html').css('background','#FFF');
 
 			/* Modificar una propiedad */
@@ -15,7 +16,7 @@
 			var cssH1={
 				'text-align':'center',
 				'color':'red'
-			}
+			};
 
 			$('h1').css(cssH1);
 			/* también podríamos haber puesto directamente el objeto Json 
@@ -32,6 +33,7 @@
 
 		});
 	</script>
+	<!-- ESTILO -->
 	<style>
 		body,html
 		{
@@ -56,10 +58,13 @@
 			height:50px;
 			margin:5% auto; 
 			width:300px;
+			/* Añadimos esta propiedad para que nos salte el último if */
+			color: #000;
 		}
 	</style>
 </head>
 <body>
+<!-- CUERPO -->
 	<h1>Método CSS</h1>
 	<div id="item1">Elemento 1</div>
 	<div id="item2">Elemento 2</div>

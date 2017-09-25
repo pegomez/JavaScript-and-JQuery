@@ -11,7 +11,7 @@
 			$.fx.speeds.rapido=100;
 			$('#b1').click(function(){
 				//$('#ejemplo').fadeOut(); //'slow'
-				//$('#ejemplo').fadeOut('lento'); //'rapido'
+				$('#ejemplo').fadeOut('lento'); //'rapido'
 
 				//se puede disparar una función al terminar
 				$('#ejemplo').fadeOut('lento',function(){
@@ -21,9 +21,17 @@
 					//2-
 					//$(this).remove(); //inspecciona elemento y comprueba elements
 					//comprueba el ejemplo con y sin remove()
+					/*
+					En el caso de que no quitemos el remove:
+						Lo que ocurre es que cada vez que pulsamos sobre
+						el botón de Fade out se escribe "El elemento se ha borrado".
+					En el caso de que no quitemos el remove:
+						Lo que ocurre es que solo se muestra el texto una sola vez.
+						Esto se debe a que
+					 */
 
 					//3-desaparece el elemento y lo volvemos a mostrar rápido
-					//$(this).fadeIn('rapido');
+					$(this).fadeIn('rapido');
 				});				
 
 			})

@@ -4,16 +4,17 @@
 	<meta charset="utf-8">
 	<title>Efectos</title>
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script> src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"</script>
 	<script>
 		$(document).on('ready',function(){
 			$('#b1').click(function(){
 				//easing es linear, también puede ser swing
-				$('#ejemplo').slideUp('slow','linear'); //cambiar linear a swing
+				$('#ejemplo').slideUp('slow','swing'); //cambiar linear a swing
 				//otros tipos de easing se pueden utilizar incorporando otro plugin
 				//hay que cargarlo desde esta url:http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js
 				$(this).animate({
-					'height':['+=100','linear'],
-					'width':['+=50','linear']
+					'height':['+=100','swing'],
+					'width':['+=50','swing']
 				});
 			})
 		});

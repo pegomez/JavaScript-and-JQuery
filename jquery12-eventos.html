@@ -6,10 +6,11 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script>
 		$(document).on('ready',function(){
-			/*
+
 			// Ejemplo de uso de eventos en jQuery
 
 			// Ejemplo de manejo del evento click
+			/*
 			$('a').on('click',function(){
 				//this es el elemento que disparó el evento
 				//sería el elemento <a>
@@ -25,11 +26,15 @@
 				// probar e.type
 			})
 			*/
+			/*
+			En este caso lo que ocurre es que se muestra la anchura.
+			*/
+
 			
 			//Ejemplo que muestra cómo vincular y desvincular eventos
 			// se usan los métodos mouseover y mouseout
 			// para más información hay que consultar la web de jQuery
-			/*
+
 			var caja1bg;			
 			$('#caja1').mouseover(function(){
 				caja1bg=$('#caja1').css('background');
@@ -38,7 +43,13 @@
 			$('#caja1').mouseout(function(){
 				$(this).css('background',caja1bg);
 			})
-			*/
+			/*
+			Por este método podemos seleccionar qué acción realizar
+			una vez que nos movemos por encima del elemento. De tal forma que
+			cuando estamos encima, se pone rojo, y cuando no,
+			se mantiene el color por defecto (blanco)
+			 */
+
 
 		});
 	</script>

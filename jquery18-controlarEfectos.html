@@ -6,11 +6,12 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script>
 		$(document).on('ready',function(){
+            $.fx.off=true;
 			//ejemplo que muestra cómo controlar animaciones
 			
 			//Ejemplo 1: metodo stop() en funcion pararAnim()
 			//definimos un time-out:
-			/*
+
 			var to=setTimeout('pararAnim()',2000);
 
 			$('#caja1').animate({
@@ -22,10 +23,13 @@
 					'opacity':0.5
 				})
 			})
-			*/
+
 
 			//Ejemplo 2: método delay	
-			//$('#caja1').slideUp().delay(2000).slideDown();
+			// $('#caja1').slideUp().delay(2000).slideDown();
+			/*
+			Se muestra el efecto y poco después deja de estar disponible.
+			 */
 
 			//Ejemplo 3: desactivar las animaciones colocando
 			//directamente los valores finales
